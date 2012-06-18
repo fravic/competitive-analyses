@@ -24,7 +24,11 @@ function _Index() {
 
     function imgClick(e) {
         var img = $(e.target);
-        img.css("width", "99%");
+
+        // Only expand landscape mode for now
+        if (img.width() > img.height()) {
+            img.css("width", "99%");
+        }
 
         $("IMG").each(function(idx, ele) {
             if ($(ele).get(0) == img.get(0)) return 1;
