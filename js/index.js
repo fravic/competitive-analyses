@@ -16,8 +16,9 @@ function _Index() {
             "Path": 2,
             "Venmo": 2
         },
-        "Signup on Web" : {
-            "Facebook": 2
+        "Activation on Web" : {
+            "Facebook": 3,
+            "Pinterest": 1
         },
     };
 
