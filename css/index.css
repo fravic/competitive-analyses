@@ -21,6 +21,10 @@ HR {
     width: 50%;
 }
 
+IMG {
+    cursor: pointer;
+}
+
 .selected {
     font-weight: bold;
 }

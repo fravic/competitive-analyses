@@ -5,7 +5,7 @@ function _Index() {
             "Facebook": 6,
             "Foursquare": 4,
             "GooglePlus": 6,
-            "LinkedIn": 3,
+            "LinkedIn": 4,
             "Path": 2,
             "Pinterest": 3,
             "Twitter": 3,
@@ -18,17 +18,29 @@ function _Index() {
         },
         "Activation on Web" : {
             "Facebook": 3,
-            "Pinterest": 1
+            "Foodily": 1,
+            "Foursquare": 4,
+            "LinkedIn": 2,
+            "Pinterest": 2,
+            "Popset": 2,
+            "Spotify": 1,
+            "Trover": 1
         },
+        "Prompts on Web" : {
+            "Facebook": 1,
+            "LinkedIn": 2,
+            "Pinterest": 1
+        }
     };
 
     function imgClick(e) {
         var img = $(e.target);
 
-        // Only expand landscape mode for now
-        if (img.width() > img.height()) {
-            img.css("width", "99%");
-        }
+        var theImage = new Image();
+        theImage.src = img.attr("src");
+
+        img.css("width", "99%");
+        img.css("max-width", theImage.width);
 
         $("IMG").each(function(idx, ele) {
             if ($(ele).get(0) == img.get(0)) return 1;
